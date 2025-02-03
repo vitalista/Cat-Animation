@@ -16,6 +16,15 @@ const head = document.querySelector('.head');
 
         if (clicked) {
           setTimeout(() => {
+
+            // Add the 'active' class to trigger animation
+            bubble.classList.add('active');
+    
+            // Optionally, reset the animation after it completes
+            setTimeout(function() {
+                bubble.classList.remove('active');
+            }, 1500); // This matches the animation duration
+            
              bubble.style.opacity = "1";
             bubble.style.display = "block";
           }, 1500);
